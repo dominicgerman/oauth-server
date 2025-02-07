@@ -57,7 +57,7 @@ Initiates the OAuth 2.0 authorization flow by redirecting the user to the provid
 **Example Request:**
 
 ```sh
-curl -X GET "http://localhost:8080/api/oauth/authorize?response_type=code&client_id=upfirst&redirect_uri=http://localhost:8081/process&state=xyz123"
+curl -i "http://localhost:8080/api/oauth/authorize?response_type=code&client_id=upfirst&redirect_uri=http://localhost:8081/process&state=xyz123"
 ```
 
 Example Response (Redirect):
