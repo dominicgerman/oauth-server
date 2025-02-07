@@ -107,3 +107,28 @@ Example Response:
   "expires_in": 3600
 }
 ```
+
+## Running Tests
+
+This project includes Vitest tests.
+
+Run the tests with:
+
+```sh
+npm test
+```
+
+### Test Coverage
+
+- should return 302 and redirect with a code
+- should return 400 if client_id is missing
+- should exchange authorization code for access token
+- should return 400 for missing parameters
+- should return 400 for an invalid authorization code
+- should return 400 for an unsupported grant_type
+
+## Notes
+
+- This implementation does not include a user authentication system.
+- The authorization code is stored in-memory (authCodes map). A database should be used for production.
+- JWTs are signed using jose, but no refresh tokens are implemented.
